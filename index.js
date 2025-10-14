@@ -1,11 +1,9 @@
-// index.js
 import path from "path";
 import chalk from "chalk";
 import { fileURLToPath } from "url";
 import { readJSONFile } from "./utils/fileReader.js";
 import { startSpinner, stopSpinner } from "./utils/spinner.js";
 
-// Setup for __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -16,7 +14,6 @@ async function main() {
   try {
     const users = await readJSONFile(filePath);
 
-    // Simulate async delay
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     stopSpinner(spinner, true, "Data processed successfully!");
@@ -33,7 +30,6 @@ async function main() {
       );
     });
 
-    // Example processing: calculate average age
     const avgAge =
       users.reduce((sum, user) => sum + user.age, 0) / users.length;
 

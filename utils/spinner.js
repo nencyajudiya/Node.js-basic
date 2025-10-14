@@ -1,4 +1,3 @@
-// utils/spinner.js
 import ora from "ora";
 import cliCursor from "cli-cursor";
 

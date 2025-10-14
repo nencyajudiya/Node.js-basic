@@ -1,4 +1,3 @@
-// utils/fileReader.js
 import { readFile } from "fs/promises";
 
 export async function readJSONFile(filePath) {
